@@ -12,7 +12,8 @@ RUN \
     libshout-dev \
     make \
     libconfig-dev \
-    raspberrypi-dev && \
+    raspberrypi-dev \
+    raspberrypi-libs && \
   apk add \
     --repository 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' \
     librtlsdr-dev && \
