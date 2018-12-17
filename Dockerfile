@@ -23,4 +23,5 @@ RUN \
   apk del g++ make && \
   rm -rf /build
 
+ENV LD_LIBRARY_PATH /opt/vc/lib
 CMD ["/usr/local/bin/rtl_airband", "-Fec", "/rtl_airband.conf"]
