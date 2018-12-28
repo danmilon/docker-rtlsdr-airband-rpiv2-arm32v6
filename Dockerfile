@@ -20,7 +20,10 @@ RUN \
   cd /build/RTLSDR-Airband-3.0.1 && \
   make PLATFORM=rpiv2 && \
   make install && \
-  apk del g++ make && \
+  apk del \
+    --rdepends \
+    g++ \
+    make && \
   rm -rf /build
 
 ENV LD_LIBRARY_PATH /opt/vc/lib
