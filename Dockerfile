@@ -15,12 +15,14 @@ RUN \
     raspberrypi-dev \
     raspberrypi-libs && \
   apk add \
+    --no-cache \
     --repository 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' \
     librtlsdr-dev && \
   cd /build/RTLSDR-Airband-3.0.1 && \
   make PLATFORM=rpiv2 && \
   make install && \
   apk del \
+    --no-cache \
     --rdepends \
     g++ \
     make && \
